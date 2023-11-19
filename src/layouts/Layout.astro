@@ -1,4 +1,5 @@
 ---
+import Navigation from "../components/Navigation.astro"
 interface Props {
     title: string
 }
@@ -15,6 +16,9 @@ const { title = 'Astro default'} = Astro.props as Props
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+        <Navigation/>
+        <div class="mt-[50px] max-w-[960px] m-auto">
+            <slot />
+        </div>
 	</body>
 </html>
